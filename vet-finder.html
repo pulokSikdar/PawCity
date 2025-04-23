@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find a Vet - PawCity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="vet-finder-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="pawcity-logo.png" alt="PawCity">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Our services</a>
+            <a href="#">About us</a>
+        </div>
+    </nav>
+
+    <div class="vet-finder-container">
+        <div class="back-button" onclick="window.location.href='index.html'">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+
+        <header class="vet-finder-header">
+            <h1>Find a Vet</h1>
+            <div class="search-bar">
+                <input type="text" placeholder="Search by name or specialty">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <div class="filters-bar">
+            <div class="filter-group">
+                <label>Category</label>
+                <div class="category-pills">
+                    <button class="pill active" data-category="all">All</button>
+                    <button class="pill" data-category="cat">Cat</button>
+                    <button class="pill" data-category="dog">Dog</button>
+                    <button class="pill" data-category="bird">Bird</button>
+                    <button class="pill" data-category="turtle">Turtle</button>
+                </div>
+            </div>
+
+            <div class="filter-group">
+                <label>Location</label>
+                <select class="location-select">
+                    <option value="vatara">Vatara</option>
+                    <option value="banani">Banani</option>
+                    <option value="gulshan">Gulshan</option>
+                    <option value="baridhara">Baridhara</option>
+                </select>
+            </div>
+
+            <div class="filter-group">
+                <label>Service type</label>
+                <select class="service-select">
+                    <option value="emergency">Emergency</option>
+                    <option value="routine">Routine Checkup</option>
+                    <option value="surgery">Surgery</option>
+                    <option value="vaccination">Vaccination</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="quick-actions">
+            <button class="action-btn emergency-btn">
+                <i class="fas fa-ambulance"></i>
+                Emergency Care
+            </button>
+            <button class="action-btn online-btn">
+                <i class="fas fa-video"></i>
+                Online Consultation
+            </button>
+            <button class="action-btn home-btn">
+                <i class="fas fa-home"></i>
+                Home Visit
+            </button>
+        </div>
+
+        <div class="vets-grid">
+            <!-- Vet cards will be populated by JavaScript -->
+        </div>
+
+        <div class="online-consultation-banner">
+            <div class="banner-content">
+                <h2>Need immediate veterinary advice?</h2>
+                <p>Connect with our certified veterinarians online</p>
+                <button class="consult-btn">Consult a Vet Online</button>
+            </div>
+            <div class="banner-image">
+                <img src="online-vet.png" alt="Online Vet Consultation">
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div class="booking-modal" id="bookingModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2>Book Appointment</h2>
+            <form id="bookingForm">
+                <div class="form-group">
+                    <label>Pet Category</label>
+                    <select required>
+                        <option value="">Select pet type</option>
+                        <option value="cat">Cat</option>
+                        <option value="dog">Dog</option>
+                        <option value="bird">Bird</option>
+                        <option value="turtle">Turtle</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label>Date</label>
+                    <input type="date" required>
+                </div>
+                <div class="form-group">
+                    <label>Time</label>
+                    <input type="time" required>
+                </div>
+                <div class="form-group">
+                    <label>Reason for Visit</label>
+                    <textarea required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="vet-finder.js"></script>
+</body>
+</html> 
