@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adopt a Pet - PawCity</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="adopt-styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="pawcity-logo.png" alt="PawCity">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Our services</a>
+            <a href="#">About us</a>
+        </div>
+    </nav>
+
+    <div class="adopt-container">
+        <div class="back-button" onclick="window.location.href='index.html'">
+            <i class="fas fa-arrow-left"></i>
+        </div>
+
+        <h1 class="adopt-title">Adopt a Pet</h1>
+
+        <div class="search-sort-section">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search your items">
+                <button class="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="sort-section">
+                <span>Sort by</span>
+                <select id="sortSelect">
+                    <option value="name">Name</option>
+                    <option value="location">Location</option>
+                    <option value="age">Age</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="adopt-layout">
+            <aside class="category-sidebar">
+                <h2>Category</h2>
+                <ul class="category-list">
+                    <li data-category="cat" class="active">Cat</li>
+                    <li data-category="dog">Dog</li>
+                    <li data-category="bird">Bird</li>
+                    <li data-category="turtle">Turtle</li>
+                </ul>
+            </aside>
+
+            <main class="pets-grid">
+                <!-- Pets will be added here dynamically -->
+            </main>
+        </div>
+    </div>
+
+    <!-- Pet Details Modal -->
+    <div class="pet-modal" id="petModal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="pet-details">
+                <!-- Pet details will be added here dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <script src="adopt.js"></script>
+</body>
+</html> 
