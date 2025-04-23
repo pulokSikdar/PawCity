@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PawCity - Your Pet Care Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <img src="pawcity-logo.png" alt="PawCity">
+        </div>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="#" class="active">Our services</a>
+            <a href="#">About us</a>
+        </div>
+        <div class="auth-profile-section">
+            <!-- Login/Signup button (shown by default) -->
+            <a href="login.html" class="login-btn" id="loginButton">
+                <i class="fas fa-user"></i>
+                <span>Login / Sign Up</span>
+                <div class="btn-hover-effect"></div>
+            </a>
+            
+            <!-- Profile button (hidden by default) -->
+            <div class="profile-section" id="profileSection" style="display: none;">
+                <button class="profile-btn" onclick="window.location.href='profile.html'">
+                    <img src="default-avatar.jpg" alt="Profile" class="profile-icon" id="profileIcon">
+                    <span class="profile-name" id="profileName">User</span>
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="profile-section" style="display: none;">
+        <div class="profile-container">
+            <img src="default-profile.png" alt="Profile" id="profilePic">
+            <h2 id="profileName"></h2>
+            <p id="profileEmail"></p>
+            <p id="profileBio"></p>
+            <button onclick="logout()" class="logout-btn">Logout</button>
+        </div>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to PawCity</h1>
+            <p>PawCity is your one-stop platform for pet care, offering products, vet consultations, health tracking, and adoption support. We promote ethical breeding and a responsible pet community, making pet care easy and accessible for all.</p>
+        </div>
+        <div class="hero-image">
+            <img src="pets.png" alt="Dog and Cat">
+        </div>
+    </section>
+
+    <section class="services" id="services">
+        <h2 class="section-title">Our services</h2>
+        <div class="services-grid">
+            <a href="shop.html" class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-shopping-bag"></i>
+                </div>
+                <span>Shop Pet Essentials</span>
+            </a>
+
+            <a href="adopt.html" class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-paw"></i>
+                </div>
+                <span>Adopt a Pet</span>
+            </a>
+
+            <a href="vet-finder.html" class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <span>Find a Vet</span>
+            </a>
+
+            <a href="breeding.html" class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <span>Breeding Services</span>
+            </a>
+
+            <a href="community.html" class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <span>Community & Resources</span>
+            </a>
+
+            <a href="blog.html" class="service-item">
+                <div class="service-icon">
+                    <i class="fas fa-edit"></i>
+                </div>
+                <span>Blog</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="contact-info">
+            <div class="address">
+                <p>Pa T1, Middle</p>
+                <p>Badda, Gulshan</p>
+                <p>Dhaka 1212</p>
+                <p>Bangladesh</p>
+            </div>
+            <div class="phone-numbers">
+                <p>+8801718216341</p>
+                <p>+8801897268477</p>
+                <p>+8801732137465</p>
+                <p>+8801533106113</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html> 
